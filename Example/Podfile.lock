@@ -1,5 +1,5 @@
 PODS:
-  - MBTaskContainer (0.1.0)
+  - MBTaskContainer (0.1.1)
 
 DEPENDENCIES:
   - MBTaskContainer (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MBTaskContainer: a36675b5e5f5848c9b2cb0ea89fc1bd3f98a4c62
+  MBTaskContainer: 3af484ebe5a253f683cca05973449a7f480535b1
 
 PODFILE CHECKSUM: d36f2716995c1216ab69462b62a6afad98aa0302
 
