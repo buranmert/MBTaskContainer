@@ -30,5 +30,6 @@ Then you are at the right place! MBTaskContainer is for you! Return it to UI lay
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'MBTaskContainer/Classes/**/*'
+  s.public_header_files = 'MBTaskContainer/Classes/**/*.{h,m}'
   s.frameworks = 'Foundation'
 end
