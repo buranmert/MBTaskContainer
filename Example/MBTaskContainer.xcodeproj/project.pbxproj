@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		306151B21D4D96AB00073060 /* MBDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 306151B11D4D96AB00073060 /* MBDataController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		07873608923A1EA6A210D791 /* Pods_MBTaskContainer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBTaskContainer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		306151B01D4D96AB00073060 /* MBDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDataController.h; sourceTree = "<group>"; };
+		306151B11D4D96AB00073060 /* MBDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBDataController.m; sourceTree = "<group>"; };
 		5777B212694A3CE4524E6574 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MBTaskContainer_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBTaskContainer_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -135,6 +138,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* MBViewController.h */,
 				6003F5A6195388D20070C39A /* MBViewController.m */,
+				306151B01D4D96AB00073060 /* MBDataController.h */,
+				306151B11D4D96AB00073060 /* MBDataController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -392,6 +397,7 @@
 			files = (
 				6003F59E195388D20070C39A /* MBAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MBViewController.m in Sources */,
+				306151B21D4D96AB00073060 /* MBDataController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,8 +7,13 @@
 //
 
 #import "MBViewController.h"
+#import "MBDataController.h"
 
-@interface MBViewController ()
+@interface MBViewController () <MBTaskContainerDelegate>
+
+@property (nonatomic, strong) MBDataController *dataController;
+@property (nonatomic, strong) MBTaskContainer *serialTaskContainer;
+@property (nonatomic, strong) MBTaskContainer *parallelTaskContainer;
 
 @end
 
@@ -17,13 +22,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.dataController = [MBDataController new];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.serialTaskContainer = [self.dataController seriallyGetRepositoriesOrganizationsMembers];
+    self.serialTaskContainer.delegate = self;
+    
+    self.parallelTaskContainer = [self.dataController parallelGetRepositoriesOrganizationsMembers];
+    self.parallelTaskContainer.delegate = self;
+}
+
+- (void)taskContainer:(MBTaskContainer *)taskContainer didAddNewTask:(NSURLSessionTask *)task {
+    if ([taskContainer isEqual:self.parallelTaskContainer]) {
+        NSLog(@"parallel");
+    }
+    else if ([taskContainer isEqual:self.serialTaskContainer]) {
+        NSLog(@"serial");
+    }
+    NSLog(@"didAddNewTask: %@", task.originalRequest.URL.absoluteString);
+    NSLog(@"didAddNewTask taskCount: %lu", [taskContainer getTasks].count);
+}
+
+- (void)taskContainer:(MBTaskContainer *)taskContainer didRemoveTask:(NSURLSessionTask *)task {
+    if ([taskContainer isEqual:self.parallelTaskContainer]) {
+        NSLog(@"parallel");
+    }
+    else if ([taskContainer isEqual:self.serialTaskContainer]) {
+        NSLog(@"serial");
+    }
+    NSLog(@"didRemoveTask: %@", task.originalRequest.URL.absoluteString);
+    NSLog(@"didRemoveTask taskCount: %lu", [taskContainer getTasks].count);
 }
 
 @end
