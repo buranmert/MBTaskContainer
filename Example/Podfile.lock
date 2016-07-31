@@ -1,0 +1,16 @@
+PODS:
+  - MBTaskContainer (0.1.0)
+
+DEPENDENCIES:
+  - MBTaskContainer (from `../`)
+
+EXTERNAL SOURCES:
+  MBTaskContainer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MBTaskContainer: a36675b5e5f5848c9b2cb0ea89fc1bd3f98a4c62
+
+PODFILE CHECKSUM: d36f2716995c1216ab69462b62a6afad98aa0302
+
+COCOAPODS: 1.0.1
