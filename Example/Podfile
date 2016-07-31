@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MBTaskContainer_Example' do
+  pod 'MBTaskContainer', :path => '../'
+
+  target 'MBTaskContainer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
