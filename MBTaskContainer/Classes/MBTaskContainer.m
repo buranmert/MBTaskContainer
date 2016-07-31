@@ -18,6 +18,7 @@ static char * MBTaskContainerIOQueueIdentifier = "MBTaskContainer.MBTaskContaine
 @end
 
 @implementation MBTaskContainer
+@synthesize state = _state;
 
 - (instancetype)init {
     self = [super init];
@@ -32,6 +33,12 @@ static char * MBTaskContainerIOQueueIdentifier = "MBTaskContainer.MBTaskContaine
 - (void)dealloc {
     for (NSURLSessionTask *task in self.tasks) {
         [task removeObserver:self forKeyPath:NSStringFromSelector(@selector(state))];
+    }
+}
+
+- (MBTaskContainerState)state {
+    @synchronized (self) {
+        return _state;
     }
 }
 
