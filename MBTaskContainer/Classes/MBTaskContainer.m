@@ -45,7 +45,7 @@ static char * MBTaskContainerIOQueueIdentifier = "MBTaskContainer.MBTaskContaine
 - (void)setState:(MBTaskContainerState)state {
     @synchronized (self) {
         _state = state;
-        switch (self.state) {
+        switch (state) {
             case MBTaskContainerStateDefault: {
                 break;
             }
