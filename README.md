@@ -14,8 +14,8 @@
 Let's say your server use `OAuth2` authentication standard, so you need to obtain a token before establishing a connection to access your `API`
 And again, let's say your application has an architecture like the following:
 
-`ViewController` -> `DataController`
-*_where_*
+`ViewController` -> `DataController` *_where_*
+
 1. `ViewController`
   - Typical `UIViewController` subclass
   - it may have an `UIButton` to cancel ongoing network operations
