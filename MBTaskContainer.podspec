@@ -20,6 +20,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'MBTaskContainer/Classes/**/*'
-  s.public_header_files = 'MBTaskContainer/Classes/**/*.{h,m}'
+  s.public_header_files = 'MBTaskContainer/Classes/**/*.h'
   s.frameworks = 'Foundation'
 end
