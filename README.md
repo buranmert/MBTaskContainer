@@ -1,6 +1,6 @@
 # MBTaskContainer
 
-[![CI Status](http://img.shields.io/travis/Mert Buran/MBTaskContainer.svg?style=flat)](https://travis-ci.org/Mert Buran/MBTaskContainer)
+[![CI Status](http://img.shields.io/travis/Mert Buran/MBTaskContainer.svg?style=flat)](https://travis-ci.org/buranmert/MBTaskContainer)
 [![Version](https://img.shields.io/cocoapods/v/MBTaskContainer.svg?style=flat)](http://cocoapods.org/pods/MBTaskContainer)
 [![License](https://img.shields.io/cocoapods/l/MBTaskContainer.svg?style=flat)](http://cocoapods.org/pods/MBTaskContainer)
 [![Platform](https://img.shields.io/cocoapods/p/MBTaskContainer.svg?style=flat)](http://cocoapods.org/pods/MBTaskContainer)
