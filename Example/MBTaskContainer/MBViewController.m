@@ -12,8 +12,8 @@
 @interface MBViewController () <MBTaskContainerDelegate>
 
 @property (nonatomic, strong) MBDataController *dataController;
-@property (nonatomic, strong) MBTaskContainer *serialTaskContainer;
-@property (nonatomic, strong) MBTaskContainer *parallelTaskContainer;
+@property (nonatomic, weak) MBTaskContainer *serialTaskContainer;
+@property (nonatomic, weak) MBTaskContainer *parallelTaskContainer;
 
 @end
 

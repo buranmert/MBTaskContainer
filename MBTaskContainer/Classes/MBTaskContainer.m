@@ -145,4 +145,6 @@ static char * MBTaskContainerIOQueueIdentifier = "MBTaskContainer.MBTaskContaine
     return currentTasks;
 }
 
+- (void)tasksMayComplete { }
+
 @end

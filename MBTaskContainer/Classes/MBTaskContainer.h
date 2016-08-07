@@ -7,10 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
-FOUNDATION_EXPORT double MBTaskContainerVersionNumber;
-FOUNDATION_EXPORT const unsigned char MBTaskContainerVersionString[];
-
 #import <MBTaskContainer/MBTaskContainerDelegate.h>
 
 typedef NS_ENUM(NSUInteger, MBTaskContainerState) {
@@ -26,5 +22,9 @@ typedef NS_ENUM(NSUInteger, MBTaskContainerState) {
 
 - (BOOL)addTask:(NSURLSessionTask *)newTask;
 - (NSArray<NSURLSessionTask*> *)getTasks;
+/**
+ *  convenience method. implementation does nothing
+ */
+- (void)tasksMayComplete;
 
 @end

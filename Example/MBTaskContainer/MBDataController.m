@@ -33,13 +33,19 @@ static NSString * const membersURL = @"/orgs/Augmentedev/public_members";
 - (MBTaskContainer *)parallelGetRepositoriesOrganizationsMembers {
     MBTaskContainer *taskContainer = [MBTaskContainer new];
     
-    NSURLSessionTask *repositories = [self fetchDataWithRelativeURL:repositoriesURL completion:nil];
+    NSURLSessionTask *repositories = [self fetchDataWithRelativeURL:repositoriesURL completion:^(NSError *error) {
+        [taskContainer tasksMayComplete];
+    }];
     [taskContainer addTask:repositories];
     
-    NSURLSessionTask *organizations = [self fetchDataWithRelativeURL:organizationsURL completion:nil];
+    NSURLSessionTask *organizations = [self fetchDataWithRelativeURL:organizationsURL completion:^(NSError *error) {
+        [taskContainer tasksMayComplete];
+    }];
     [taskContainer addTask:organizations];
     
-    NSURLSessionTask *members = [self fetchDataWithRelativeURL:membersURL completion:nil];
+    NSURLSessionTask *members = [self fetchDataWithRelativeURL:membersURL completion:^(NSError *error) {
+        [taskContainer tasksMayComplete];
+    }];
     [taskContainer addTask:members];
     
     return taskContainer;
@@ -54,8 +60,9 @@ static NSString * const membersURL = @"/orgs/Augmentedev/public_members";
             organizations = [self fetchDataWithRelativeURL:organizationsURL completion:^(NSError *error) {
                 if (error == nil) {
                     NSURLSessionTask *members = nil;
-                    members = [self fetchDataWithRelativeURL:membersURL completion:nil];
-                    
+                    members = [self fetchDataWithRelativeURL:membersURL completion:^(NSError *error) {
+                        [taskContainer tasksMayComplete];
+                    }];
                     [taskContainer addTask:members];
                 }
             }];
